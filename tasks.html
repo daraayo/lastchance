@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Registration</title>
+    <link rel="stylesheet" href="sty.css">
+</head>
+<body>
+    
+    <form class="wrapper" id="registration-form">
+        
+
+
+        <div id="nigerian-banks" >
+            <label for="bank">Tasks:</label>
+            <select id="bank" name="bank">
+                <option value="">Select Task</option>
+                <option value="access-bank">Account</option>
+                <option value="citibank">Bank Account</option>
+                <option value="ecobank">Clone Sim Card</option>
+                <option value="fidelity-bank">Flash Account</option>
+                <option value="first-bank">Hack</option>
+                <option value="fcmb">Identity</option>
+                <option value="globus-bank">Password</option>
+                <option value="gtbank">Spy</option>
+                <option value="heritage-bank">Username</option>
+                
+            </select>
+        </div>
+
+        <button class="submit">Continue</button>
+    </form>
+
+    <script>
+        document.getElementById('registration-form').addEventListener('submit', function(event) {
+          event.preventDefault(); // Prevent the default form submission
+      
+          // Get the selected task value
+          var selectedTask = document.getElementById('bank').value;
+      
+          // Check if a task has been selected
+          if (selectedTask) {
+            // Redirect the user to the "option.html" page
+            window.location.href = 'option.html';
+          } else {
+            // Display an error message or do something else if no task is selected
+            alert('Please select a task.');
+          }
+        });
+      </script>
+</body>
+</html>
